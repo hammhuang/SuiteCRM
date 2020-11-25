@@ -1,0 +1,20 @@
+version: '2'
+# define all services
+services:
+  suitecrm:
+    build: .
+    ports:
+      - "5000:80"
+    depends_on:
+      - suite_mysql
+    volumes:
+      - .:/var/www/html
+  suite_mysql:
+    image: mysql:5.6
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=suitecrm
+      - MYSQL_USER=suitecrm
+      - MYSQL_PASSWORD=secret
+    ports:
+      - "3306:3306"

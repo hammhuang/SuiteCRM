@@ -63,12 +63,3 @@ COPY . $APP_HOME
 
 # install all PHP dependencies
 RUN composer install --no-interaction
-
-# install suitecrm in silent mode
-RUN curl -sS http://localhost/install.php?goto=SilentInstall
-
-# create private.key and public key then move to Oauth2 directory
-RUN ./vendor/bin/robo api:generate-keys
-
-# change ownership of our applications
-RUN chown -R www-data:www-data $APP_HOME

@@ -344,7 +344,13 @@ installStatus($mod_strings['STAT_CREATE_DEFAULT_SETTINGS']);
     if ($new_tables) {
         echo $line_entry_format.$mod_strings['LBL_PERFORM_DEFAULT_USERS'].$line_exit_format;
         installLog($mod_strings['LBL_PERFORM_DEFAULT_USERS']);
-        create_default_users();
+        if ($_SESSION['setup_create_default_user']) {
+            create_default_users();
+        } else {
+            $current_user = BeanFactory::newBean('Users');
+            $current_user->is_admin = '1';
+            $GLOBAL['current_user'] = $current_user;
+        }
         echo $mod_strings['LBL_PERFORM_DONE'];
     } else {
         echo $line_entry_format.$mod_strings['LBL_PERFORM_ADMIN_PASSWORD'].$line_exit_format;

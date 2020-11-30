@@ -43,11 +43,25 @@ curl http://localhost/install.php?goto=SilentInstall&cli=true
 ## api key (需要 安裝完之後的 config 檔案)
 ./vendor/bin/robo api:generate-keys
 
+會在 Api/Oauth2/ 底下產生 private.key, public.key
+
 ## modified tables (需要 安裝完之後的 config 檔案)
 ./vendor/bin/robo repair:quick-repair-and-rebuild
 
 ## config_override.php 為系統上線後的系統設定檔
 config_override.php 的東西 是安裝完之後的
+
+直接覆蓋 config_override
+
+```shell
+$ cp config_override.php.example => config_override.php
+```
+
+之後修改 config_override.php 的參數
+
+```shell
+sed '/\$sugar_config\[\x27logger\x27\]\[\x27level\x27\] = \x27debug2\x27/a $sugar_config[\x27logger\x27][\x27default\x27] = \x27CustomSugarLogger\x27;' config_override.php || sed '/\$sugar_config\[\x27logger\x27\]\[\x27level\x27\] = \x27debug\x27/a $sugar_config[\x27logger\x27][\x27default\x27] = \x27CustomSugarLogger\x27;' config_override.php
+```
 
 # .gitignore
 有調整過追蹤 custom 目錄底下的客制功能

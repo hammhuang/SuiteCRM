@@ -2,10 +2,11 @@
 # Install
 ## 安裝(會需要 config_si.php)
 
-```
+```shell
 $ cp config_si.php.example => config_si.php
 ```
 
+```php
 $sugar_config_si = array(
     'setup_create_default_user' => 0,// Custom variable
     'default_currency_iso4217' => 'TWD',
@@ -35,6 +36,7 @@ $sugar_config_si = array(
     'setup_site_url' => 'http://127.0.0.1:5000', # 需修改
     'setup_system_name' => 'Site Name', # 需修改
 );
+```
 
 curl http://localhost/install.php?goto=SilentInstall&cli=true
 

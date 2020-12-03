@@ -8,7 +8,11 @@ services:
     depends_on:
       - suite_mysql
     volumes:
-      - .:/var/www/html
+      - ./upload:/var/www/html/upload
+      - ./public/:/var/www/html/public
+      - ./config_si.php/:/var/www/html/config_si.php
+      - ./Api/V8/Oauth2/private.key:/var/www/html/Api/V8/Oauth2/private.key
+      - ./Api/V8/Oauth2/public.key:/var/www/html/Api/V8/Oauth2/public.key
   suite_mysql:
     image: mysql:5.6
     environment:

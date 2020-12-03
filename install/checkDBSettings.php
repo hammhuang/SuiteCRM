@@ -326,7 +326,7 @@ function copyInputsIntoSession()
         $_SESSION['setup_db_create_sugarsales_user']      = false;
         $_SESSION['setup_db_create_database']             = false;
     } else {
-        $_SESSION['setup_db_create_database']             = true;
+        // $_SESSION['setup_db_create_database']             = true;
         //retrieve the value from dropdown in order to know what settings the user
         //wants to use for the sugar db user.
 

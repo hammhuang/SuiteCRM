@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 # define all services
 services:
   suitecrm:
@@ -7,12 +7,9 @@ services:
       - "5000:80"
     depends_on:
       - suite_mysql
+      - suite_elasticsearch
     volumes:
-      - ./upload:/var/www/html/upload
-      - ./public/:/var/www/html/public
-      - ./config_si.php/:/var/www/html/config_si.php
-      - ./Api/V8/Oauth2/private.key:/var/www/html/Api/V8/Oauth2/private.key
-      - ./Api/V8/Oauth2/public.key:/var/www/html/Api/V8/Oauth2/public.key
+      - .:/var/www/html/
   suite_mysql:
     image: mysql:5.6
     environment:
@@ -22,3 +19,13 @@ services:
       - MYSQL_PASSWORD=secret
     ports:
       - "3306:3306"
+  suite_elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:5.6.10
+        restart: unless-stopped
+        ports:
+            - 9200:9200
+            - 9300:9300
+        environment:
+            - discovery.type=single-node
+            - xpack.security.enabled=false
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"

@@ -67,4 +67,4 @@ RUN composer install --no-interaction
 # change ownership of our applications
 RUN chown -R www-data:www-data $APP_HOME
 RUN chmod -R 755 $APP_HOME/.
-RUN chmod -R 755 custom modules themes data upload
+RUN chmod -R 775 custom modules themes data upload

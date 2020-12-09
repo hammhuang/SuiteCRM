@@ -8,11 +8,12 @@ class CustomSugarLogger extends SugarLogger
 {
     public function __construct()
     {
+
         parent::__construct();
 
         if (
             isset($GLOBALS['sugar_config']['logger']['default'])
-            && $GLOBALS['sugar_config']['logger']['default'] == 'CustomSugarLogger'
+            && $GLOBALS['sugar_config']['logger']['default'] == 'CustomSugar'
         ) {
             LoggerManager::setLogger('default', 'CustomSugarLogger');
         }

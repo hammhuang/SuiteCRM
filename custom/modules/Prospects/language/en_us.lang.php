@@ -1,0 +1,26 @@
+<?php
+// created: 2020-12-14 08:37:22
+$mod_strings = array (
+  'LBL_DESCRIPTION' => 'Description:',
+  'LBL_DELETED' => 'Deleted',
+  'LBL_SALUTATION' => 'Salutation',
+  'LBL_TITLE' => 'Job Title:',
+  'LBL_LAST_NAME' => 'Last Name:',
+  'LBL_FIRST_NAME' => 'First Name:',
+  'LBL_PHOTO' => 'Photo',
+  'LBL_MOBILE_PHONE' => 'Mobile:',
+  'LBL_HOME_PHONE' => 'Home:',
+  'LBL_EMAIL_ADDRESS' => 'Email Address:',
+  'LBL_PRIMARY_ADDRESS_STREET' => 'Primary Address Street:',
+  'LBL_ACCOUNT_NAME' => 'Account Name',
+  'LBL_BIRTHDATE' => 'Birthdate:',
+  'LBL_ASSISTANT_PHONE' => 'Assistant Phone:',
+  'LBL_TRACKER_KEY' => 'Tracker Key',
+  'LBL_ASSISTANT' => 'Assistant:',
+  'LBL_ALT_ADDRESS_COUNTRY' => 'Alternate Address Country:',
+  'LBL_OTHER_PHONE' => 'Other Phone:',
+  'LBL_ALT_ADDRESS_CITY' => 'Alternate Address City:',
+  'LBL_ALT_ADDRESS_POSTALCODE' => 'Alternate Address Postal Code:',
+  'LBL_ALT_ADDRESS_STATE' => 'Alternate Address State:',
+  'LBL_FAX_PHONE' => 'Fax:',
+);

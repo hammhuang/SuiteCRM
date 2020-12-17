@@ -1,0 +1,28 @@
+<?php
+// created: 2020-12-14 07:38:37
+$mod_strings = array (
+  'LBL_DESCRIPTION' => 'Description:',
+  'LBL_TYPE' => 'Type:',
+  'LBL_INDUSTRY' => 'Industry:',
+  'LBL_ANNUAL_REVENUE' => 'Annual Revenue:',
+  'LBL_FAX' => 'Fax:',
+  'LBL_BILLING_ADDRESS_STREET' => 'Billing Street:',
+  'LBL_BILLING_ADDRESS_CITY' => 'Billing City:',
+  'LBL_BILLING_ADDRESS_STATE' => 'Billing State:',
+  'LBL_BILLING_ADDRESS_POSTALCODE' => 'Billing Postal Code:',
+  'LBL_BILLING_ADDRESS_COUNTRY' => 'Billing Country:',
+  'LBL_RATING' => 'Rating:',
+  'LBL_PHONE_ALT' => 'Alternate Phone:',
+  'LBL_WEBSITE' => 'Website:',
+  'LBL_OWNERSHIP' => 'Ownership:',
+  'LBL_EMPLOYEES' => 'Employees:',
+  'LBL_TICKER_SYMBOL' => 'Ticker Symbol:',
+  'LBL_SHIPPING_ADDRESS_STREET' => 'Shipping Street:',
+  'LBL_SHIPPING_ADDRESS_CITY' => 'Shipping City:',
+  'LBL_SHIPPING_ADDRESS_STATE' => 'Shipping State:',
+  'LBL_SHIPPING_ADDRESS_POSTALCODE' => 'Shipping Postal Code:',
+  'LBL_SHIPPING_ADDRESS_COUNTRY' => 'Shipping Country:',
+  'LBL_EMAIL' => 'Email Address:',
+  'LBL_SIC_CODE' => 'SIC Code:',
+  'LBL_DELETED' => 'Deleted',
+);
